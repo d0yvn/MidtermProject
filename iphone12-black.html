@@ -15,51 +15,60 @@
         function sidebar_close(){
             document.getElementById("sizeMenu").style.width = "0px";
             document.getElementById("closeButton").style.display = "none";
-        }
+        };
 
+        
     </script>
     
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="navbar_logo">
-                <i class="fas fa-tshirt"></i>
-                <a href="main.html">Online store</a>
-            </div>
+    <script>
+        window.onload= function(){
+            var element = document.getElementById("count");
+            element.addEventListener('change', function() {
+            value = (element.value) * 634;
+            document.getElementById("totalPrice").innerHTML = "$" + value + ".00";
+            });
+        }
+        
+    </script>
+    <nav class="navbar">
+        <div class="navbar_logo">
+            <i class="fas fa-tshirt"></i>
+            <a href="main.html">Online store</a>
+        </div>
 
-            <ul class="navbar_menu">
-                <li><a href="">home</a></li>
-                <li><a href="">about</a></li>
-                <li><a href="">informaion</a></li>
-                <li><a href="">FAQ</a></li>
-            </ul>
+        <ul class="navbar_menu">
+            <li><a href="">home</a></li>
+            <li><a href="">about</a></li>
+            <li><a href="">informaion</a></li>
+            <li><a href="">FAQ</a></li>
+        </ul>
 
-            <div class="navbar_icons">
-                <form action="#">
-                    <input type="text" placeholder = " search" name = "search" style = "padding-left:6px">
-                </form>
-                <a href=""><i class="fas fa-search"></i></a>
-                <a href=""><i class="fas fa-shopping-cart"></i></a>
-            </div>
+        <div class="navbar_icons">
+            <form action="#">
+                <input type="text" placeholder = " search" name = "search" style = "padding-left:6px">
+            </form>
+            <a href=""><i class="fas fa-search"></i></a>
+            <a href=""><i class="fas fa-shopping-cart"></i></a>
+        </div>
 
-            <div class="sidebar" id = "sizeMenu" style = "padding-top :20px" >
-                <a href="javascript:void(0)" id = "closeButton" class="closebtn" style = "display :none" onclick="sidebar_close()">&times;</a>
-                <a href="login.html" style = "padding-top : 10px;">로그인</a>
-                <a href="join.html">회원 가입</a>
-                <br>
-                <a href="#">Best</a>
-                <a href="#">Mac</a>
-                <a href="#">IPad</a>
-                <a href="#">IPhone</a>
-                <a href="#">Watch</a>
-                <a href="#">Accessories</a>
-                <a href="#">Q&A</a>
-            </div>
+        <div class="sidebar" id = "sizeMenu" style = "padding-top :20px" >
+            <a href="javascript:void(0)" id = "closeButton" class="closebtn" style = "display :none" onclick="sidebar_close()">&times;</a>
+            <a href="login.html" style = "padding-top : 10px;">로그인</a>
+            <a href="join.html">회원 가입</a>
+            <br>
+            <a href="#">Best</a>
+            <a href="#">Mac</a>
+            <a href="#">IPad</a>
+            <a href="#">IPhone</a>
+            <a href="#">Watch</a>
+            <a href="#">Accessories</a>
+            <a href="#">Q&A</a>
+        </div>
 
-            <span style = "font-size:30px;cursor:pointer; color : white" onclick="sidebar_open()">&#9776;</span>
-        </nav>
-    </header>
+        <span style = "font-size:30px;cursor:pointer; color : white" onclick="sidebar_open()">&#9776;</span>
+    </nav>
 
     <div>
         <div class="product_view">
@@ -83,7 +92,7 @@
                     <tr>
                         <th>구매수량</th>
                         <td>
-                            <input type="number" value = "1">
+                            <input type="number" value = "1" id= "count" name = "count" min = "0">
                         </td>
                     </tr>
                     <tr>
@@ -93,7 +102,8 @@
                     <tr>
                         <th>결제금액</th>
                         <td style = "font-size: 22px;
-                        color : #0a56a9;">$634.00</td>
+                        color : #0a56a9;"><div id = "totalPrice">$634.00</div>
+                        </td>
                     </tr>
                 </tbody>
             </table>

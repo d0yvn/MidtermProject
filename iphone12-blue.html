@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,12 +17,23 @@
         function sidebar_close(){
             document.getElementById("sizeMenu").style.width = "0px";
             document.getElementById("closeButton").style.display = "none";
-        }
+        };
 
+        
     </script>
     
 </head>
 <body>
+    <script>
+        window.onload= function(){
+            var element = document.getElementById("count");
+            element.addEventListener('change', function() {
+            value = (element.value) * 634;
+            document.getElementById("totalPrice").innerHTML = "$" + value + ".00";
+            });
+        }
+        
+    </script>
     <nav class="navbar">
         <div class="navbar_logo">
             <i class="fas fa-tshirt"></i>
@@ -81,7 +94,7 @@
                     <tr>
                         <th>구매수량</th>
                         <td>
-                            <input type="number" value = "1">
+                            <input type="number" value = "1" id= "count" name = "count" min = "0">
                         </td>
                     </tr>
                     <tr>
@@ -91,7 +104,8 @@
                     <tr>
                         <th>결제금액</th>
                         <td style = "font-size: 22px;
-                        color : #0a56a9;">$634.00</td>
+                        color : #0a56a9;"><div id = "totalPrice">$634.00</div>
+                        </td>
                     </tr>
                 </tbody>
             </table>
