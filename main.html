@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/388f753882.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="main.css">
+    <title>Online store</title>
+    <script>
+        function sidebar_open(){
+            document.getElementById("sizeMenu").style.width = "250px";
+            document.getElementById("closeButton").style.display = "block";
+        }
+        function sidebar_close(){
+            document.getElementById("sizeMenu").style.width = "0px";
+            document.getElementById("closeButton").style.display = "none";
+        }
+
+    </script>
+    
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar_logo">
+                <i class="fas fa-tshirt"></i>
+                <a href="main.html">Online store</a>
+            </div>
+
+            <ul class="navbar_menu">
+                <li><a href="">home</a></li>
+                <li><a href="">about</a></li>
+                <li><a href="">informaion</a></li>
+                <li><a href="">FAQ</a></li>
+            </ul>
+
+            <div class="navbar_icons">
+                <form action="#">
+                    <input type="text" placeholder = " search" name = "search" style = "padding-left:6px">
+                </form>
+                <a href=""><i class="fas fa-search"></i></a>
+                <a href=""><i class="fas fa-shopping-cart"></i></a>
+            </div>
+
+            <div class="sidebar" id = "sizeMenu" style = "padding-top :20px">
+                <a href="javascript:void(0)" id = "closeButton" class="closebtn" style = "display :none" onclick="sidebar_close()">&times;</a>
+                <a href="login.html" style = "padding-top : 10px;">로그인</a>
+                <a href="join.html">회원 가입</a>
+                <br>
+                <a href="#">Best</a>
+                <a href="#">Mac</a>
+                <a href="#">IPad</a>
+                <a href="#">IPhone</a>
+                <a href="#">Watch</a>
+                <a href="#">Accessories</a>
+                <a href="#">Q&A</a>
+            </div>
+
+            <span style = "font-size:30px;cursor:pointer; color : white" onclick="sidebar_open()">&#9776;</span>
+        </nav>
+    </header>
+
+    <div class = "sector1">
+        <h2>Our Product</h2>
+            
+        <div class = "Product">
+            <div class="card" onclick = "location.href = 'iphone12-black.html';">
+                <div class="image-container">
+                    <img src="iphone12-black.jpeg" id = "Iphone12">
+                </div>
+                <div class="product_info">
+                    <div class="name">Apple Iphone12_black 128GB</div>
+                    <div class="price">$634.00</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="image-container">
+                    <img src="iphone12-blue.jpg" id = "Iphone12">
+                </div>
+                <div class="product_info">
+                    <div class="name">Apple Iphone12_Blue 128GB</div>
+                    <div class="price">$634.00</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="image-container">
+                    <img src="iphone12-white.jpeg" id = "Iphone12">
+                </div>
+                <div class="product_info">
+                    <div class="name">Apple Iphone12_black 128GB</div>
+                    <div class="price">$634.00</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="image-container">
+                    <img src="ipadpro4-black.jpeg" id = "Iphone12">
+                </div>
+                <div class="product_info">
+                    <div class="name">Apple IPadPro4-black 256GB</div>
+                    <div class="price">$900.00</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="image-container">
+                    <img src="ipadpro4-white.jpeg" id = "Iphone12">
+                </div>
+                <div class="product_info">
+                    <div class="name">Apple IPadPro4-white 256GB</div>
+                    <div class="price">$900.00</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="image-container">
+                    <img src="2020 macbook pro 14 inch.jpeg" id = "Iphone12">
+                </div>
+                <div class="product_info">
+                    <div class="name">Apple 2020 macbook pro 14 inch</div>
+                    <div class="price">$1500.00</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="image-container">
+                    <img src="2020 macbook air 13.jpeg" id = "Iphone12">
+                </div>
+                <div class="product_info">
+                    <div class="name">Apple 2020 macbook air 13 inch</div>
+                    <div class="price">$1200.00</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="image-container">
+                    <img src="airpot pro.jpeg" id = "Iphone12">
+                </div>
+                <div class="product_info">
+                    <div class="name">Apple Airpods Pro</div>
+                    <div class="price">$230.00</div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
